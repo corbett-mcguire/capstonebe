@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CapstoneController
 {
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String hello()
     {
         return "hello";
