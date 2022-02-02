@@ -5,7 +5,7 @@ import jdk.jfr.Category;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Posts")
+@Table(name = "posts")
 public class Post {
     @Id
     @Column
@@ -63,12 +63,21 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "Type{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", title=" + title + '\'' +
                 '}';
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
 
 }
