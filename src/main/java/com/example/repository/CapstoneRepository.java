@@ -26,4 +26,18 @@ public interface CapstoneRepository extends Repository{
     Type updateType(Long typeId, Type typeObject);
 
     Type createType(Type typeObject);
+
+    Type deleteType(Long categoryId);
+
+    Post createTypePost(Long typeId, Post recipeObject);
+
+    Post getTypePosts();
+
+    Post getTypePost(Long typeId, Long postId);
+
+    List<Post> getTypePosts(Long typeId);
+
+    Post updateTypePost(Long typeId, Long postId, Post postObject);
+
+    Optional<Post> deleteTypePost(Long typeId, Long postId);
 }
