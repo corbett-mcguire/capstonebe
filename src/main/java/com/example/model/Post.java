@@ -1,6 +1,6 @@
 package com.example.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jdk.jfr.Category;
+import com.example.repository.CapstoneRepository;
 
 import javax.persistence.*;
 
@@ -23,8 +23,8 @@ public class Post {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @JoinColumn(name = "type_id")
+    private Type type;
 
     public Post() {
     }
@@ -71,12 +71,12 @@ public class Post {
                 '}';
     }
 
-    public Category getCategory() {
-        return category;
+    public Type getType() {
+        return type;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setType(Type type) {
+        this.type = type;
     }
 
 

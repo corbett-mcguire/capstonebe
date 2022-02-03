@@ -1,14 +1,16 @@
 package com.example.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.model.Post;
 import com.example.model.Type;
 import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CapstoneRepository extends Repository{
+public interface CapstoneRepository extends JpaRepository<Type, Long> {
     List<Post> getPosts();
 
     Optional getPosts(Long postId);
