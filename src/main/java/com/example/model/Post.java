@@ -15,6 +15,8 @@ public class Post {
     @Column
     private String name;
 
+
+
     @Column
     private String title;
 
@@ -24,7 +26,7 @@ public class Post {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private Type type;
+    private User user;
 
     public Post() {
     }
